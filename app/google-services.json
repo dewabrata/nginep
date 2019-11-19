@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "584823536429",
+    "firebase_url": "https://nginep-d32ba.firebaseio.com",
+    "project_id": "nginep-d32ba",
+    "storage_bucket": "nginep-d32ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584823536429:android:0a6b31296ef411840a31a4",
+        "android_client_info": {
+          "package_name": "com.juaracoding.nginep"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584823536429-5njh4ao05qqldei806lngdpc6ibro8uj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.juaracoding.nginep",
+            "certificate_hash": "a9e5c1b07b90e87ee40fc6c39d55423c9f5c646f"
+          }
+        },
+        {
+          "client_id": "584823536429-fmd2flebok98bv59j54lcqeep080k0bo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo-XwfetcQgnIOicw49PdDeWY-TbScqA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584823536429-fmd2flebok98bv59j54lcqeep080k0bo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
