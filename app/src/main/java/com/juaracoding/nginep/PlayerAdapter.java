@@ -10,8 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.juaracoding.nginep.model.Player;
 
+import com.juaracoding.nginep.model.ModelNginep;
 
 import java.util.List;
 
@@ -20,9 +20,9 @@ public class PlayerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
 
 
-    private List<Player> dataItemList;
+    private List<ModelNginep> dataItemList;
 
-    public PlayerAdapter(List<Player> dataItemList) {
+    public PlayerAdapter(List<ModelNginep> dataItemList) {
         this.dataItemList = dataItemList;
     }
 
@@ -42,7 +42,7 @@ public class PlayerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
 
             ((Penampung)holder).txtNama.setText("Nama     : " + dataItemList.get(position).getUsername());
-            ((Penampung)holder).txtAlamat.setText("Alamat   : " + dataItemList.get(position).getEmail());
+            ((Penampung)holder).txtAlamat.setText("Alamat   : " + dataItemList.get(position).getMessage());
 
 
 

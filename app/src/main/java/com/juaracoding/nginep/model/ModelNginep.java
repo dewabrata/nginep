@@ -1,33 +1,30 @@
-
 package com.juaracoding.nginep.model;
 
-import java.io.Serializable;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.os.Parcelable.Creator;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
 
 public class ModelNginep implements Serializable, Parcelable
 {
 
-    @SerializedName("status")
+    @SerializedName("username")
     @Expose
-    private Boolean status;
+    private String username;
+    @SerializedName("email")
+    @Expose
+    private String email;
     @SerializedName("message")
     @Expose
     private String message;
-    @SerializedName("data")
-    @Expose
-    private Data data;
-    @SerializedName("total")
-    @Expose
-    private Integer total;
-    public final static Creator<ModelNginep> CREATOR = new Creator<ModelNginep>() {
+    public final static Parcelable.Creator<ModelNginep> CREATOR = new Creator<ModelNginep>() {
 
 
         @SuppressWarnings({
-            "unchecked"
+                "unchecked"
         })
         public ModelNginep createFromParcel(Parcel in) {
             return new ModelNginep(in);
@@ -38,25 +35,38 @@ public class ModelNginep implements Serializable, Parcelable
         }
 
     }
-    ;
-    private final static long serialVersionUID = -5325043162070468506L;
+            ;
+    private final static long serialVersionUID = 5137931776858861165L;
 
     protected ModelNginep(Parcel in) {
-        this.status = ((Boolean) in.readValue((Boolean.class.getClassLoader())));
+        this.username = ((String) in.readValue((String.class.getClassLoader())));
+        this.email = ((String) in.readValue((String.class.getClassLoader())));
         this.message = ((String) in.readValue((String.class.getClassLoader())));
-        this.data = ((Data) in.readValue((Data.class.getClassLoader())));
-        this.total = ((Integer) in.readValue((Integer.class.getClassLoader())));
+    }
+
+    public ModelNginep(String username, String email, String message) {
+        this.username = username;
+        this.email = email;
+        this.message = message;
     }
 
     public ModelNginep() {
     }
 
-    public Boolean getStatus() {
-        return status;
+    public String getUsername() {
+        return username;
     }
 
-    public void setStatus(Boolean status) {
-        this.status = status;
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getMessage() {
@@ -67,31 +77,14 @@ public class ModelNginep implements Serializable, Parcelable
         this.message = message;
     }
 
-    public Data getData() {
-        return data;
-    }
-
-    public void setData(Data data) {
-        this.data = data;
-    }
-
-    public Integer getTotal() {
-        return total;
-    }
-
-    public void setTotal(Integer total) {
-        this.total = total;
-    }
-
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeValue(status);
+        dest.writeValue(username);
+        dest.writeValue(email);
         dest.writeValue(message);
-        dest.writeValue(data);
-        dest.writeValue(total);
     }
 
     public int describeContents() {
-        return  0;
+        return 0;
     }
 
 }
